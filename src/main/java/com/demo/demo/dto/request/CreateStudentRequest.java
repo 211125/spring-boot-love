@@ -2,13 +2,22 @@ package com.demo.demo.dto.request;
 
 public class CreateStudentRequest {
 
-    private String name;
+    private String title;
+    private String post;
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getPost() {
+        return post;
+    }
+
+    public void setPost(String post) {
+        this.post = post;
     }
 }

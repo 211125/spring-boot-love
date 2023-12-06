@@ -62,7 +62,8 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     private Student from(UpdateStudentRequest request, Student student) {
-        student.setName(request.getName());
+        student.setTitle(request.getTitle());
+        student.setPost(request.getPost());
         return student;
     }
 
@@ -78,14 +79,16 @@ public class StudentServiceImpl implements IStudentService {
 
     private Student from(CreateStudentRequest request) {
         Student student = new Student();
-        student.setName(request.getName());
+        student.setTitle(request.getTitle());
+        student.setPost(request.getPost());
         return student;
     }
 
     private StudentResponse from(Student student) {
         StudentResponse response = new StudentResponse();
         response.setId(student.getId());
-        response.setName(student.getName());
+        response.setTitle(student.getTitle());
+        response.setPost(student.getPost());
         return response;
     }
 }

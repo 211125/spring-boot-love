@@ -26,6 +26,7 @@ public class StudentController {
         return service.list();
     }
 
+
     @PostMapping
     public void create(@RequestBody CreateStudentRequest request) {
         service.create(request);
